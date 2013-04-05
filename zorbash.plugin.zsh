@@ -1,0 +1,5 @@
+alias sser='sudo service'
+alias b='bundle exec'
+alias br='bundle exec rake'
+alias rs='b rails server'
+alias rr='br routes'

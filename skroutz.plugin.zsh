@@ -1,0 +1,11 @@
+#aliases
+alias skco='rails c'
+alias skcosan='rails c -sandbox'
+alias sks='rails s'
+alias sktest='git testme'
+alias skfere='git fetch origin && git rebase origin/master'
+alias skreviewer='git annotate --show-stats'
+alias skrso='git remote show origin'
+alias skdiff='git diff --whitespace'
+alias alif='alias | grep '
+alias bre='bundle exec rake'
