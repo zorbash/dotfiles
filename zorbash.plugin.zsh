@@ -21,8 +21,10 @@ alias gdc='git diff --cached'
 
 alias v='vim'
 
+
+
 rspork() {
-  rspec "$*" --drb;
+  rspec --color "$*" --drb;
 }
 
 ase_mas() {
