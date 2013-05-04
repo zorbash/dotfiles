@@ -1,3 +1,5 @@
+alias l='ls -laFh'
+
 alias sser='sudo service'
 alias b='bundle exec'
 alias br='bundle exec rake'
@@ -6,7 +8,6 @@ alias rr='br routes'
 alias rcs='rc --sandbox'
 
 alias gfo='git fetch origin'
-alias gap='git add --patch'
 alias lol='git lol'
 alias lola='git lola'
 
@@ -17,10 +18,11 @@ alias sagu='sudo apt-get update'
 alias pkgfind='dpkg-query -l | grep -i'
 
 alias ga='git add'
+alias gap='git add --patch'
 alias gdc='git diff --cached'
 
 alias v='vim'
-
+alias grep='ag'
 
 
 rspork() {
