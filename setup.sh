@@ -15,7 +15,7 @@ dotfiles=0
 [ "$1" == "--first-time" ] && first_time=1
 [ "$1" == "--dotfiles" ] && dotfiles=1
 
-#creating directories 
+#creating directories
 $p "Creating directories\n"
 mkdir ~/dev -v
 mkdir ~/builds -v
@@ -83,6 +83,12 @@ $sagi meld
 #htop
 $sagi htop
 
+#thunar
+$sagi thunar
+
+#mc
+$sagi mc
+
 #install zorbash's dotfiles
 if [ $first_time -eq 1 ] || [ $dotfiles -eq 1 ]; then
   ./install_dotfiles.sh
@@ -92,7 +98,7 @@ fi
 if [ 1 == 0 ]; then
   sublime_latest='software/Sublime\ Text\ 2.0.1'
   cd ~/tmp && wget http://c758482.r82.cf2.rackcdn.com/Sublime%20Text%202.0.1%20x64.tar.bz2 &&
-  [ $! -eq 0 ] && tar -xjf ./Sublime\ Text\ 2.0.1\ x64.tar.bz2 
+  [ $! -eq 0 ] && tar -xjf ./Sublime\ Text\ 2.0.1\ x64.tar.bz2
   mv ./Sublime\ Text\ 2.0.1\ x64 ~/$sublime_latest
   cd ~
 fi
@@ -116,14 +122,14 @@ if [ "$node_exists" == "" ]; then
 	$sagu
 	$sagi python-software-properties python g++ make
 	sudo add-apt-repository ppa:chris-lea/node.js
-	$sagu	
+	$sagu
 	$sagi nodejs
 fi
 
 #ack
 $sagi ack-grep
 
-#ag 
+#ag
 ag_exists=$(which ag)
 if [ "$ag_exists" == "" ]; then
   $sagi automake pkg-config libpcre3-dev zlib1g-dev liblzma-dev
@@ -131,12 +137,12 @@ if [ "$ag_exists" == "" ]; then
   cd ./the_silver_searcher
   ./build.sh
   sudo make install
-fi 
+fi
 
 #skype
 skype_exists=$(which skype)
 if [ "$skype_exists" == "" ]; then
-  cd ~/tmp 
+  cd ~/tmp
   if [ -f "skype.deb" ]; then
     wget http://download.skype.com/linux/skype-ubuntu-precise_4.1.0.20-1_i386.deb -O skype.deb
   fi
@@ -149,3 +155,7 @@ $sagi haskell-platform
 
 #erlang
 $sagi erlang erlang-doc
+
+#install node packages
+snig='sudo npm install -g'
+$snig nodemon coffee-script express stylus socket.io
