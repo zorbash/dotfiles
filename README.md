@@ -9,10 +9,11 @@ My dotfiles
 
 
 ## Sublime Packages
-[emmet](https://github.com/sergeche/emmet-sublime)
-[git]()
-[sidebargit](https://github.com/SublimeText/SideBarGit)
-[gitgutter](https://github.com/jisaacks/GitGutter)
-[hayaku](https://github.com/hayaku/hayaku)
-[sidebarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
-[codeIntel](https://github.com/SublimeCodeIntel/codeintel)
+- [emmet](https://github.com/sergeche/emmet-sublime)
+- [git]()
+- [sidebargit](https://github.com/SublimeText/SideBarGit)
+- [gitgutter](https://github.com/jisaacks/GitGutter)
+- [hayaku](https://github.com/hayaku/hayaku)
+- [sidebarEnhancements](https://github.com/titoBouzout/SideBarEnhancements)
+- [codeIntel](https://github.com/SublimeCodeIntel/codeintel)
+- [alignment](http://wbond.net/sublime_packages/alignment)
