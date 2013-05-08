@@ -24,6 +24,7 @@ alias gdc='git diff --cached'
 alias v='vim'
 alias grep='ag'
 
+alias pms='sudo pm-suspend'
 
 rspork() {
   rspec --color "$*" --drb;
