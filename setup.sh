@@ -42,6 +42,13 @@ if [[ $first_time == 1 ]]; then
   git config --global user.email $git_email
 
   git config --global core.editor vim
+  git config --global color.ui true
+
+  git config --global alias.co checkout
+  git config --global alias.br branch
+  git config --global alias.ci commit
+  git config --global alias.st status
+  git config --global alias.unstage 'reset HEAD --'
 
   $p "\n Generating ssh keys\n"
   ssh-keygen -t rsa -C "me@zorbash.com"
@@ -49,6 +56,24 @@ if [[ $first_time == 1 ]]; then
   $p "\nCopied the new key to clipboard\n"
   $p "Please paste it to github (go to https://github.com/settings/ssh)"
 fi
+
+#gitk
+$sagi gitk
+
+#git-gui
+$sagi git-gui
+
+#tig
+$sagi tig
+
+#github-cli
+$sagi github-cli
+
+#gitstats
+$sagi gitstats
+
+#sqlite3
+$sagi sqlite3
 
 #light-dm
 $sagi lightdm
@@ -115,6 +140,8 @@ fi
 #i3
 $sagi i3
 
+#weechat
+$sagi weechat
 
 #node
 node_exists=$(which node)
@@ -158,4 +185,9 @@ $sagi erlang erlang-doc
 
 #install node packages
 snig='sudo npm install -g'
-$snig nodemon coffee-script express stylus socket.io
+$snig nodemon coffee-script express stylus socket.io sqlite3 mocha chai should expect.js underscore node-inspector nodev npm toffee eco
+
+#postgres
+psql='postgresql'
+psqlv="$psql-9.1"
+$sagi "$psqlv" "$psqlv-postgis" "$psql-common" "$psql-contrib-9.1"
