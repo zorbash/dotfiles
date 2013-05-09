@@ -37,3 +37,5 @@ ase_mas() {
 c() {
   cat $1 | more
 }
+
+alias lockme='i3lock'
