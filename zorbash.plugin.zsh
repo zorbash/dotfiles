@@ -33,3 +33,7 @@ rspork() {
 ase_mas() {
   echo "ase mas re $USER"
 }
+
+c() {
+  cat $1 | more
+}
