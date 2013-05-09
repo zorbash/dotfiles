@@ -39,3 +39,4 @@ c() {
 }
 
 alias lockme='i3lock'
+alias del='rm -vrf'
