@@ -15,6 +15,7 @@ alias st2='sublime-text-2'
 
 alias sagi='sudo apt-get install -y'
 alias sagu='sudo apt-get update'
+alias snig='sudo npm install -g'
 alias pkgfind='dpkg-query -l | grep -i'
 
 alias ga='git add'
@@ -40,3 +41,9 @@ c() {
 
 alias lockme='i3lock'
 alias del='rm -vrf'
+
+alias proble='sudo nmap -sS -PN'
+
+lsf() {
+  l | awk '{print $5 " "  $9}'
+}

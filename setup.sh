@@ -185,7 +185,8 @@ $sagi erlang erlang-doc
 
 #install node packages
 snig='sudo npm install -g'
-$snig nodemon coffee-script express stylus socket.io sqlite3 mocha chai should expect.js underscore node-inspector nodev npm toffee eco
+$snig nodemon coffee-script express stylus socket.io sqlite3 mocha chai should
+expect.js underscore node-inspector nodev npm toffee eco gumba
 
 #postgres
 psql='postgresql'
