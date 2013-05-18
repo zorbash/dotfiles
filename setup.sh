@@ -72,6 +72,9 @@ $sagi github-cli
 #gitstats
 $sagi gitstats
 
+$openssl
+$sagi openssl
+
 #sqlite3
 $sagi sqlite3
 
