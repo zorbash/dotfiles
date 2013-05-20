@@ -117,6 +117,11 @@ $sagi thunar
 #mc
 $sagi mc
 
+$sagi graphviz
+
+#gimp
+$sagi gimp
+
 #install zorbash's dotfiles
 if [ $first_time -eq 1 ] || [ $dotfiles -eq 1 ]; then
   ./install_dotfiles.sh
