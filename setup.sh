@@ -117,6 +117,12 @@ $sagi thunar
 #mc
 $sagi mc
 
+#nethogs
+$sagi nethogs
+
+#iotop
+$sagi iotop
+
 $sagi graphviz
 
 #gimp
