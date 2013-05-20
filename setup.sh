@@ -131,6 +131,12 @@ $sagi pv
 #gimp
 $sagi gimp
 
+#python essentials
+$sagi python-pip python-dev
+
+#howdoi
+pip install howdoi
+
 #install zorbash's dotfiles
 if [ $first_time -eq 1 ] || [ $dotfiles -eq 1 ]; then
   ./install_dotfiles.sh
