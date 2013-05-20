@@ -42,8 +42,12 @@ c() {
 
 alias lockme='i3lock'
 alias del='rm -vrf'
-
 alias proble='sudo nmap -sS -PN'
+
+alias connections='lsof -i -n | grep ESTABLISHED'
+
+alias rfind='find . -print0  | xargs -0 egrep -I'
+alias external_ip='curl ifconfig.me'
 
 lsf() {
   l | awk '{print $5 " "  $9}'

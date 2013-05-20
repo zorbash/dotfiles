@@ -125,6 +125,9 @@ $sagi iotop
 
 $sagi graphviz
 
+#pv
+$sagi pv
+
 #gimp
 $sagi gimp
 
