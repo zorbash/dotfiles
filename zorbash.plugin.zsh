@@ -4,6 +4,7 @@ alias sser='sudo service'
 alias b='bundle exec'
 alias br='bundle exec rake'
 alias rs='b rails server'
+alias rc='b rails console'
 alias rr='br routes'
 alias rcs='rc --sandbox'
 
