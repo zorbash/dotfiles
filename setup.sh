@@ -137,6 +137,9 @@ $sagi python-pip python-dev
 #howdoi
 pip install howdoi
 
+#aptitude
+$sagi aptitude
+
 #install zorbash's dotfiles
 if [ $first_time -eq 1 ] || [ $dotfiles -eq 1 ]; then
   ./install_dotfiles.sh
