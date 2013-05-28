@@ -37,7 +37,7 @@ ase_mas() {
 }
 
 c() {
-  cat $1 | more
+  less $1
 }
 
 alias lockme='i3lock'
@@ -52,3 +52,6 @@ alias external_ip='curl ifconfig.me'
 lsf() {
   l | awk '{print $5 " "  $9}'
 }
+
+#skroutz specific shortcuts
+alias y="cd ~/dev/yogurt"
