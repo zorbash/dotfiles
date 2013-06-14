@@ -28,6 +28,8 @@ alias grep='ag'
 
 alias pms='sudo pm-suspend'
 
+alias mp='mkdir -p'
+
 rspork() {
   rspec --color "$*" --drb;
 }
