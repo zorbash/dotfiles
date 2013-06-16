@@ -169,6 +169,9 @@ $sagi i3
 #weechat
 $sagi weechat
 
+#xclip
+$sagi xclip
+
 #node
 node_exists=$(which node)
 if [ "$node_exists" == "" ]; then

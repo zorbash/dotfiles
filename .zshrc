@@ -105,4 +105,10 @@ fi
 ###-end-bower-completion-###
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
-eval "$(rbenv init -)"
+
+export RUBY_GC_MALLOC_LIMIT=60000000
+export RUBY_FREE_MIN=200000
+export RUBY_HEAP_MIN_SLOTS=40000
+
+#make alt+shift toggle layout between us,gr
+setxkbmap -option grp:alt_shift_toggle us,gr

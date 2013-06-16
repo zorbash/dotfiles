@@ -1,0 +1,18 @@
+Xft.antialias: true
+Xft.hinting: true
+Xft.hintstyle: hintslight
+Xft.rgba: rgb
+
+*.URxvt.font: xft:DejaVu Sans Mono-11
+*.URxvt.boldFont: xft:DejaVu Sans Mono-11
+
+*.URxvt.background: #111111
+*.URxvt.foreground: #eeeeee
+
+*.URxvt.scrollBar: false
+
+*.URxvt.perl-ext-common: default,matcher
+*.URxvt.urlLauncher: /usr/bin/chromium
+*.URxvt.matcher.button: 2
+
+*.URxvt.urgentOnBell: true
