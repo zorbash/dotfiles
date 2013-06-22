@@ -101,6 +101,9 @@ fi
 #curl
 $sagi curl
 
+#tree
+$sagi tree
+
 #vim
 $sagi vim
 #install vim's plugins
