@@ -43,6 +43,8 @@ c() {
 }
 
 alias lockme='i3lock'
+alias xlockme='xscreensaver-command -lock'
+
 alias del='rm -vrf'
 alias proble='sudo nmap -sS -PN'
 

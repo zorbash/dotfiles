@@ -185,6 +185,11 @@ fi
 #ack
 $sagi ack-grep
 
+$sagi xscreensaver unicode-screensacer xscreensaver-gl-extra
+$sagi rss-glx
+$sagi xscreensaver-data-extra
+
+
 #ag
 ag_exists=$(which ag)
 if [ "$ag_exists" == "" ]; then
