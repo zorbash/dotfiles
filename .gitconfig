@@ -1,0 +1,24 @@
+[user]
+	name = zorbash
+	email = me@zorbash.com
+[color]
+	ui = true
+[core]
+	editor = vim
+[alias]
+	oneline ="!_() { $(test $# -eq 0 && echo xargs -L1) git log --no-walk --decorate --oneline \"$@\"; }; _"
+	st = status
+  ci = commit
+  co = checkout
+  di = diff
+  br = branch
+  mo =d ls-files -m
+  ti =p log -1
+  ds = diff --cached
+  sm = submodule
+  li =ne log --oneline
+  ha =rd reset --hard
+  ls = ls-files
+  po =p stash pop
+  lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
+
