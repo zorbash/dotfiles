@@ -6,7 +6,7 @@
 [core]
 	editor = vim
 [alias]
-	oneline ="!_() { $(test $# -eq 0 && echo xargs -L1) git log --no-walk --decorate --oneline \"$@\"; }; _"
+	oneline = "!_() { $(test $# -eq 0 && echo xargs -L1) git log --no-walk --decorate --oneline \"$@\"; }; _"
 	st = status
 	ci = commit
 	co = checkout
