@@ -59,3 +59,4 @@ lsf() {
 
 #skroutz specific shortcuts
 alias y="cd ~/dev/yogurt"
+alias pserver="python -m SimpleHTTPServer"
