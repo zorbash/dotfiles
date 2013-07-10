@@ -155,3 +155,4 @@ bar {
 
 bindsym $mod+c move workspace to output right
 bindsym $mod+x move workspace to output left
+exec --no-startup-id xsetroot -solid "#333333"
