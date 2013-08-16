@@ -195,6 +195,13 @@ $sagi xscreensaver-data-extra
 #feh wallpaper utility
 $sagi feh
 
+# gif recording tty sessions
+$sagi imagemagick ttyrec
+git clone https://github.com/icholy/ttygif.git
+cd ttygif
+make
+
+
 #ag
 ag_exists=$(which ag)
 if [ "$ag_exists" == "" ]; then
