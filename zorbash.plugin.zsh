@@ -23,6 +23,9 @@ alias ga='git add'
 alias gap='git add --patch'
 alias gdc='git diff --cached'
 
+alias cp='rsync -a --progress'
+alias cps='rsync -a --stats --progress'
+
 alias v='vim'
 alias grep='ag'
 
