@@ -90,6 +90,9 @@ $sagi rxvt
 #terminator
 $sagi terminator
 
+#mrename - utility to mass rename files
+$sage mrename
+
 #zsh
 $sagi zsh
 if [ $first_time -eq 1 ]; then
