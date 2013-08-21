@@ -90,8 +90,11 @@ $sagi rxvt
 #terminator
 $sagi terminator
 
+#lightweight text editor
+$sagi leafpad
+
 #mrename - utility to mass rename files
-$sage mrename
+$sagi mrename
 
 #zsh
 $sagi zsh
@@ -231,6 +234,13 @@ $sagi haskell-platform
 
 #erlang
 $sagi erlang erlang-doc
+
+#rust
+cd ~/tmp
+git clone https://github.com/mozilla/rust.git
+cd rust
+./configure
+make && sudo make install
 
 #install node packages
 snig='sudo npm install -g'
