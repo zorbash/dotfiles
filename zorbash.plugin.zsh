@@ -23,6 +23,9 @@ alias ga='git add'
 alias gap='git add --patch'
 alias gdc='git diff --cached'
 
+alias grc='git rebase --continue'
+alias gra='git rebase --abort'
+
 alias cp='rsync -a --progress'
 alias cps='rsync -a --stats --progress'
 
