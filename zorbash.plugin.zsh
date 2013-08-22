@@ -60,6 +60,8 @@ lsf() {
   l | awk '{print $5 " "  $9}'
 }
 
+alias benchmarkhdd='dd if=/dev/zero of=test bs=64k count=15k conv=fdatasync'
+
 #skroutz specific shortcuts
 alias y="cd ~/dev/yogurt"
 alias pserver="python -m SimpleHTTPServer"
