@@ -25,6 +25,7 @@ alias gdc='git diff --cached'
 
 alias grc='git rebase --continue'
 alias gra='git rebase --abort'
+alias grih='git rebase -i HEAD~'
 
 alias cp='rsync -a --progress'
 alias cps='rsync -a --stats --progress'
