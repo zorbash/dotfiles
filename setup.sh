@@ -72,11 +72,14 @@ $sagi github-cli
 #gitstats
 $sagi gitstats
 
-$openssl
+#openssl
 $sagi openssl
 
 #sqlite3
 $sagi sqlite3
+
+# mailutils (mail command)
+$sagi mailutils
 
 #light-dm
 $sagi lightdm
