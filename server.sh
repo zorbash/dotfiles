@@ -122,3 +122,6 @@ $sagi imagemagick
 psql='postgresql'
 psqlv="$psql-9.1"
 $sagi "$psqlv" "$psqlv-postgis" "$psql-common" "$psql-contrib-9.1"
+
+#rbenv
+git clone https://github.com/sstephenson/rbenv.git ~/.rbenv

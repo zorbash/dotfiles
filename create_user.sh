@@ -1,0 +1,1 @@
+sudo adduser deployer -m -g root -s /usr/bin/zsh
