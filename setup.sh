@@ -135,6 +135,9 @@ $sagi mc
 #nethogs
 $sagi nethogs
 
+$sagi xterm
+$sagi xinit
+
 #iotop
 $sagi iotop
 
