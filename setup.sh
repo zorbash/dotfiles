@@ -81,6 +81,9 @@ $sagi sqlite3
 # mailutils (mail command)
 $sagi mailutils
 
+#change kb layout command
+$sagi x11-xkb-utils
+
 #light-dm
 $sagi lightdm
 
