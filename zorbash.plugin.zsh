@@ -25,7 +25,10 @@ alias gdc='git diff --cached'
 
 alias grc='git rebase --continue'
 alias gra='git rebase --abort'
-alias grih='git rebase -i HEAD~'
+
+grih () {
+  git rebase -i HEAD~$1
+}
 
 alias cp='rsync -a --progress'
 alias cps='rsync -a --stats --progress'
@@ -59,12 +62,15 @@ alias connections='lsof -i -n | grep ESTABLISHED'
 
 alias rfind='find . -print0  | xargs -0 egrep -I'
 alias external_ip='curl ifconfig.me'
+alias benchmarkhdd='dd if=/dev/zero of=test bs=64k count=15k conv=fdatasync'
 
 lsf() {
   l | awk '{print $5 " "  $9}'
 }
 
-alias benchmarkhdd='dd if=/dev/zero of=test bs=64k count=15k conv=fdatasync'
+find_broken_symlinks() {
+  find $1 -type l -exec sh -c "file -b {} | grep -q ^broken" \; -print
+}
 
 #skroutz specific shortcuts
 alias y="cd ~/dev/yogurt"
