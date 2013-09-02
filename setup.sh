@@ -72,11 +72,20 @@ $sagi github-cli
 #gitstats
 $sagi gitstats
 
-$openssl
+#openssl
 $sagi openssl
 
 #sqlite3
 $sagi sqlite3
+
+# mailutils (mail command)
+$sagi mailutils
+
+#change kb layout command
+$sagi x11-xkb-utils
+
+#locate command
+$sagi locate
 
 #light-dm
 $sagi lightdm
@@ -128,6 +137,9 @@ $sagi mc
 
 #nethogs
 $sagi nethogs
+
+$sagi xterm
+$sagi xinit
 
 #iotop
 $sagi iotop
