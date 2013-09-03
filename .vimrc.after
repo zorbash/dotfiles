@@ -6,9 +6,50 @@ colorscheme solarized
 set wildmode=longest,list
 " make tab completion for files/buffers act like bash "
 set wildmenu
-let mapleader=","
+let mapleader=','
 " Fix slow O inserts" 
 set timeout timeoutlen=1000 ttimeoutlen=100
 set cursorline
 set colorcolumn=80,90
 set mouse=a
+
+"Ctrl-P related settings
+"let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files | grep -v -E
+"".*\.(jpg|gif|png)$"']
+let g:ctrlp_match_window_reversed = 0 
+let g:ctrlp_open_multiple_files = 'vj'
+let g:ctrlp_arg_map = 0 
+nmap <leader>t :CtrlPMixed<CR>
+
+let g:ctrlp_prompt_mappings = { 
+    \ 'AcceptSelection("e")': ['<c-v>', '<2-LeftMouse>'],
+    \ 'AcceptSelection("v")': ['<cr>', '<RightMouse>'],
+    \ }
+ 
+"Vim Powerline
+"let g:Powerline_symbols = 'fancy'
+
+
+let g:ackprg="ack-grep -H --nocolor --nogroup --column --css --ruby --js --rake --yaml --type-set css=.css,.sass "
+nmap <leader>s :Ack<space><C-r><C-w><CR>
+nmap <leader>a :Ack<space>
+
+" Remove trailing whitespaces
+" " taken from:
+" http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim/1618401#1618401
+ fun! <SID>StripTrailingWhitespaces()
+   let l = line(".")
+   let c = col(".")
+   %s/\s\+$//e
+   call cursor(l, c)
+ endfun
+
+ " auto-strip trailing white space for ruby files
+ autocmd BufWritePre *.rb :call <SID>StripTrailingWhitespaces()
+
+" backup to ~/.tmp
+set backup
+set backupdir=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
+set backupskip=/tmp/*,/private/tmp/* 
+set directory=~/.vim-tmp,~/.tmp,~/tmp,/var/tmp,/tmp 
+set writebackup
