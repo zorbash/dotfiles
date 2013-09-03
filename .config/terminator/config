@@ -1,0 +1,29 @@
+[global_config]
+  title_transmit_bg_color = "#005125"
+  borderless = True
+  focus = mouse
+  tab_position = hidden
+[keybindings]
+  group_tab = <Alt>t
+  group_all = <Alt>g
+  go_right = <Super>Right
+[profiles]
+  [[default]]
+    background_darkness = 0.94
+    background_type = transparent
+    login_shell = True
+    scrollbar_position = hidden
+    cursor_color = "#eee8d5"
+    foreground_color = "#eee8d5"
+    show_titlebar = False
+    background_color = "#222222"
+    scrollback_infinite = True
+[layouts]
+  [[default]]
+    [[[child1]]]
+      type = Terminal
+      parent = window0
+    [[[window0]]]
+      type = Window
+      parent = ""
+[plugins]
