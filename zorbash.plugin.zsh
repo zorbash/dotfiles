@@ -52,6 +52,8 @@ c() {
   less $1
 }
 
+spy () { lsof -i -P +c 0 +M | grep -i "$1" }
+
 alias lockme='i3lock'
 alias xlockme='xscreensaver-command -lock'
 
@@ -75,3 +77,9 @@ find_broken_symlinks() {
 #skroutz specific shortcuts
 alias y="cd ~/dev/yogurt"
 alias pserver="python -m SimpleHTTPServer"
+alias gitsearch="git rev-list --all | xargs git grep -F"
+alias ducks='du -cks *|sort -rn|head -11'
+
+mcd() {
+  mkdir -p "$1" && cd "$1";
+}
