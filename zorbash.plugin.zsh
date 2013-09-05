@@ -25,7 +25,7 @@ alias gdc='git diff --cached'
 
 alias grc='git rebase --continue'
 alias gra='git rebase --abort'
-
+alias gu='git reset HEAD' #unstage
 grih () {
   git rebase -i HEAD~$1
 }
