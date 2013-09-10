@@ -40,6 +40,8 @@ alias pms='sudo pm-suspend'
 
 alias mp='mkdir -p'
 
+alias xopen='xdg-open'
+
 rspork() {
   rspec --color "$*" --drb;
 }
