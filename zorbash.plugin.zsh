@@ -33,7 +33,7 @@ grih () {
 alias cp='rsync -a --progress'
 alias cps='rsync -a --stats --progress'
 
-alias v='vim'
+alias v='gvim'
 alias grep='ag'
 
 alias pms='sudo pm-suspend'
