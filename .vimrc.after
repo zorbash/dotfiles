@@ -12,6 +12,8 @@ set timeout timeoutlen=1000 ttimeoutlen=100
 set cursorline
 set colorcolumn=80,90
 set mouse=a
+set splitright
+set splitbelow
 
 "Ctrl-P related settings
 "let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files | grep -v -E
