@@ -164,6 +164,9 @@ $sagi aptitude
 # leisure stuff
 $sagi toilet cowthink cowsay fortune fortune-mod mplayer
 
+$sagi moc # Music
+
+$sagi canto # RSS
 
 #install zorbash's dotfiles
 if [ $first_time -eq 1 ] || [ $dotfiles -eq 1 ]; then
