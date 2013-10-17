@@ -31,6 +31,8 @@ grih () {
   git rebase -i HEAD~$1
 }
 
+alias gr='git for-each-ref --sort=-committerdate refs/heads | head -n 10'
+
 alias cp='rsync -a --progress'
 alias cps='rsync -a --stats --progress'
 
@@ -82,7 +84,7 @@ alias y="cd ~/dev/yogurt"
 alias pserver="python -m SimpleHTTPServer"
 alias gitsearch="git rev-list --all | xargs git grep -F"
 alias ducks='du -cks *|sort -rn|head -11'
-
+alias sushi='sudo less'
 mcd() {
   mkdir -p "$1" && cd "$1";
 }
