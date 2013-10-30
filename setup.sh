@@ -162,7 +162,7 @@ pip install howdoi
 $sagi aptitude
 
 # leisure stuff
-$sagi toilet cowthink cowsay fortune fortune-mod mplayer
+$sagi toilet cowthink cowsay fortune fortune-mod mplayer jp2a
 
 $sagi moc # Music
 
