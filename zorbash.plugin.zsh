@@ -27,7 +27,10 @@ alias grc='git rebase --continue'
 alias gra='git rebase --abort'
 alias gu='git reset HEAD' #unstage
 alias gcontains='git branch -a --contains='
-grih () {
+alias grp='grep --color=always'
+alias ggrp='git grep'
+
+grih() {
   git rebase -i HEAD~$1
 }
 
@@ -85,6 +88,7 @@ alias pserver="python -m SimpleHTTPServer"
 alias gitsearch="git rev-list --all | xargs git grep -F"
 alias ducks='du -cks *|sort -rn|head -11'
 alias sushi='sudo less'
+
 mcd() {
   mkdir -p "$1" && cd "$1";
 }
