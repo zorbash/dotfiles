@@ -105,6 +105,9 @@ $sagi leafpad
 #mrename - utility to mass rename files
 $sagi mrename
 
+# events calendar
+$sagi pal
+
 #zsh
 $sagi zsh
 if [ $first_time -eq 1 ]; then
