@@ -30,6 +30,8 @@ alias gcontains='git branch -a --contains='
 alias grp='grep --color=always'
 alias ggrp='git grep'
 
+alias rspec='rspec --color'
+
 grih() {
   git rebase -i HEAD~$1
 }
