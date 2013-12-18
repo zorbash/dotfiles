@@ -36,7 +36,6 @@ grih() {
 
 alias gr='git for-each-ref --sort=-committerdate refs/heads | head -n 10'
 
-alias cp='rsync -a --progress'
 alias cps='rsync -a --stats --progress'
 
 alias v='gvim'
