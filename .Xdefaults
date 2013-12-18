@@ -1,13 +1,13 @@
-Xft.antialias: true
-Xft.hinting: true
-Xft.hintstyle: hintslight
+Xft.autohint: 1
+Xft.lcdfilter:  lcddefault
+Xft.hintstyle:  hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.dpi: 96
 Xft.rgba: rgb
 
-*.URxvt.font: xft:DejaVu Sans Mono-11
-*.URxvt.boldFont: xft:DejaVu Sans Mono-11
-
-*.URxvt.background: #111111
-*.URxvt.foreground: #eeeeee
+*.URxvt.font: xft: Liberation Mono-9
+*.URxvt.boldFont: xft: Liberation Mono-9
 
 *.URxvt.scrollBar: false
 
@@ -16,3 +16,12 @@ Xft.rgba: rgb
 *.URxvt.matcher.button: 2
 
 *.URxvt.urgentOnBell: true
+URxvt.scrollBar: off
+
+URxvt.saveLines:           4096
+
+URxvt.urlLauncher:         xdg-open
+URxvt.url-select.launcher: xdg-open
+URxvt.colorUL:             S_orange
+URxvt.underlineURLs:       true
+URxvt.urgentOnBell:        true
