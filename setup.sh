@@ -155,6 +155,11 @@ $sagi pv
 #gimp
 $sagi gimp
 
+# For rmagick
+$sagi graphicsmagick-libmagick-dev-compat libmagickwand-dev
+
+$sagi wkhtmltopdf
+
 #python essentials
 $sagi python-pip python-dev
 
