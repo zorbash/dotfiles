@@ -10,7 +10,7 @@ set wildmode=longest,list
 " make tab completion for files/buffers act like bash "
 set wildmenu
 let mapleader=','
-" Fix slow O inserts" 
+" Fix slow O inserts"
 set timeout timeoutlen=1000 ttimeoutlen=100
 set cursorline
 set colorcolumn=80,90
@@ -19,18 +19,22 @@ set mouse=a
 set splitright
 set splitbelow
 
+"Spell checking git commits and markdown"
+autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd FileType gitcommit setlocal spell
+
 "Ctrl-P related settings
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files | grep -v -E ".*\.(jpg|gif|png)$"']
-let g:ctrlp_match_window_reversed = 0 
+let g:ctrlp_match_window_reversed = 0
 let g:ctrlp_open_multiple_files = 'vj'
-let g:ctrlp_arg_map = 0 
+let g:ctrlp_arg_map = 0
 nmap <leader>t :CtrlPMixed<CR>
 
-let g:ctrlp_prompt_mappings = { 
+let g:ctrlp_prompt_mappings = {
     \ 'AcceptSelection("e")': ['<c-v>', '<2-LeftMouse>'],
     \ 'AcceptSelection("v")': ['<cr>', '<RightMouse>'],
     \ }
- 
+
 "Vim Powerline
 "let g:Powerline_symbols = 'fancy'
 
