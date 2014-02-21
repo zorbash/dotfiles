@@ -1,1 +1,0 @@
-sudo useradd deployer -m -g root -s /usr/bin/zsh
