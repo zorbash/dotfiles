@@ -108,6 +108,9 @@ $sagi mrename
 # events calendar
 $sagi pal
 
+# todos
+$sagi calcurse
+
 #zsh
 $sagi zsh
 if [ $first_time -eq 1 ]; then
