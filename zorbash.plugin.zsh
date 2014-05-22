@@ -40,7 +40,7 @@ alias gr='git for-each-ref --sort=-committerdate refs/heads | head -n 10'
 
 alias cps='rsync -a --stats --progress'
 
-alias v='gvim'
+alias v='vim'
 alias grep='ag'
 
 alias pms='sudo pm-suspend'
@@ -86,9 +86,11 @@ find_broken_symlinks() {
 #skroutz specific shortcuts
 alias y="cd ~/dev/yogurt"
 alias pserver="python -m SimpleHTTPServer"
+alias rserver="ruby -run -ehttpd . -p8000"
 alias gitsearch="git rev-list --all | xargs git grep -F"
 alias ducks='du -cks *|sort -rn|head -11'
 alias sushi='sudo less'
+alias rspec='nocorrect rspec'
 
 mcd() {
   mkdir -p "$1" && cd "$1";
