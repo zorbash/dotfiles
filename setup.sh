@@ -214,11 +214,11 @@ $sagi xclip
 #node
 node_exists=$(which node)
 if [ "$node_exists" == "" ]; then
-	$sagu
-	$sagi python-software-properties python g++ make
-	sudo add-apt-repository ppa:chris-lea/node.js
-	$sagu
-	$sagi nodejs
+  $sagu
+  $sagi python-software-properties python g++ make
+  sudo add-apt-repository ppa:chris-lea/node.js
+  $sagu
+  $sagi nodejs
 fi
 
 #ack
