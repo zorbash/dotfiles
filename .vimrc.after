@@ -70,3 +70,14 @@ map <Insert> :set paste<CR>i<CR><CR><Esc>k:.!xclip -o<CR>JxkJx:set nopaste<CR>
 augroup AuNERDTreeCmd
   autocmd!
 augroup end
+
+set mousefocus
+
+" For matching tag highlighting with matchTagAlways plugin
+let g:mta_filetypes = {
+    \ 'html' : 1,
+    \ 'eruby' : 1,
+    \ 'xhtml' : 1,
+    \ 'xml' : 1,
+    \ 'jinja' : 1,
+    \}
