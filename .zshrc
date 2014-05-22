@@ -104,6 +104,8 @@ elif type compctl &>/dev/null; then
   compctl -K _bower_completion bower
 fi
 ###-end-bower-completion-###
+
+PATH=$(npm bin):$PATH
 export PATH="$HOME/.rbenv/bin:$PATH"
 eval "$(rbenv init -)"
 
