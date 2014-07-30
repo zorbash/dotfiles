@@ -1,25 +1,36 @@
 [user]
-	name = zorbash
-	email = me@zorbash.com
+	name = Dimitris Zorbas
+	email = zorbash@skroutz.gr
+[alias]
+	co = checkout
+	br = branch
+	ci = commit
+	st = status
+	last = log -1 HEAD
+	visual = !gitk
+	today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+	lol = log --graph --decorate --pretty=oneline --abbrev-commit
+	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+	sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+	sapply = "!f() { git stash apply stash^{/$*}; }; f"
+	ri = rebase -i
+	ris = rebase -i --autosquash
+	cif = "!f() { git commit --fixup="$1"; }; f"
+	dc = "diff --cached"
+	ds = "diff --staged"
+	panic = rev-list --all --remotes --pretty=oneline
+	g = grep --break --heading --line-number
+  lc = "!f() { git log --oneline -n1 $1 | cut -f 1 -d ' '; }; f"
+
+
 [color]
-	ui = true
+  branch = auto
+  diff = auto
+  interactive = auto
+  status = auto
 [core]
 	editor = vim
-[alias]
-	oneline = "!_() { $(test $# -eq 0 && echo xargs -L1) git log --no-walk --decorate --oneline \"$@\"; }; _"
-	st = status
-	ci = commit
-	co = checkout
-	di = diff
-	br = branch
-	mo =d ls-files -m
-	ti =p log -1
-	ds = diff --cached
-	sm = submodule
-	li =ne log --oneline
-	ha =rd reset --hard
-	ls = ls-files
-	po =p stash pop
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
-  show = "!f() { git stash show stash^{/$*} -p; }; f"
-  sapply = "!f() { git stash apply stash^{/$*}; }; f"
+[push]
+	default = upstream
+[grep]
+	lineNumber = true
