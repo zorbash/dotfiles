@@ -41,7 +41,6 @@ alias gr='git for-each-ref --sort=-committerdate refs/heads | head -n 10'
 alias cps='rsync -a --stats --progress'
 
 alias v='vim'
-alias grep='ag'
 
 alias pms='sudo pm-suspend'
 
