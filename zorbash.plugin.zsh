@@ -84,12 +84,14 @@ find_broken_symlinks() {
 
 #skroutz specific shortcuts
 alias y="cd ~/dev/yogurt"
+
 alias pserver="python -m SimpleHTTPServer"
 alias rserver="ruby -run -ehttpd . -p8000"
 alias gitsearch="git rev-list --all | xargs git grep -F"
 alias ducks='du -cks *|sort -rn|head -11'
 alias sushi='sudo less'
 alias rspec='nocorrect rspec'
+alias vms='VBoxManage list runningvms'
 
 mcd() {
   mkdir -p "$1" && cd "$1";
