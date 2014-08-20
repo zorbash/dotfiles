@@ -1,0 +1,6 @@
+#!/bin/bash
+
+# Modified version of https://github.com/garybernhardt/dotfiles/blob/master/bin/git-churn
+set -e
+
+git log --all -M -C --name-only --format='format:' "$@" | sort | grep -v '^$' | uniq -c | sort | sort -g | tac
