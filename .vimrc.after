@@ -36,7 +36,7 @@ let g:ctrlp_prompt_mappings = {
     \ }
 
 "Vim Powerline
-"let g:Powerline_symbols = 'fancy'
+let g:Powerline_symbols = 'fancy'
 
 
 let g:ackprg="ack-grep -H --nocolor --nogroup --column --css --ruby --js --rake --yaml --type-set css=.css,.sass "
@@ -71,13 +71,33 @@ augroup AuNERDTreeCmd
   autocmd!
 augroup end
 
-set mousefocus
+let g:vim_markdown_folding_disabled=1
 
-" For matching tag highlighting with matchTagAlways plugin
-let g:mta_filetypes = {
-    \ 'html' : 1,
-    \ 'eruby' : 1,
-    \ 'xhtml' : 1,
-    \ 'xml' : 1,
-    \ 'jinja' : 1,
-    \}
+
+" Tabularize mappings
+func! SetTabularizeMappings()
+  " Tabularize assignments
+  " Uses zero-width negative lookahead to prevent splitting up hashrockets:
+  nmap <Leader>a= :Tabularize /=\@<!=[\=>]\@!<CR>
+  vmap <Leader>a= :Tabularize /=\@<!=[\=>]\@!<CR>
+  " Tabularize argument lists
+  nmap <Leader>a, :Tabularize /,\zs/l1r0<CR>
+  vmap <Leader>a, :Tabularize /,\zs/l1r0<CR>
+  " Tabularize JS style object definitions
+  " Exclude ':' char from match to prevent colons being columnized:
+  nmap <Leader>a: :Tabularize /:\zs/l1r0<CR>
+  vmap <Leader>a: :Tabularize /:\zs/l1r0<CR>
+  " Tabularize hashrockets
+  nmap <Leader>ah :Tabularize /=><CR>
+  vmap <Leader>ah :Tabularize /=><CR>
+  " Tabularize hash arguments
+  nmap <Leader>ar :Tabularize /:[^,]\{-1,}=><CR>
+  vmap <Leader>ar :Tabularize /:[^,]\{-1,}=><CR>
+  " Align block delimiters
+  nmap <Leader>ab :Tabularize /\(^[^{]*\zs{\\|}$\)<CR>
+  vmap <Leader>ab :Tabularize /\(^[^{]*\zs{\\|}$\)<CR>
+endfu
+autocmd VimEnter * if exists(":Tabularize") | exe "call SetTabularizeMappings()" | endif
+
+
+let g:rainbow_active = 1
