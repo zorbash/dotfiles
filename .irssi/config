@@ -22,6 +22,8 @@ chatnets = {
 
 channels = (
   { name = "#skroutz"; chatnet = "Skroutz"; autojoin = "Yes"; }
+  { name = "#js"; chatnet = "Skroutz"; autojoin = "Yes"; }
+  { name = "#merchants"; chatnet = "Skroutz"; autojoin = "Yes"; }
 );
 
 aliases = {
