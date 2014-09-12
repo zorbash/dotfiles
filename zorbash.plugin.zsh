@@ -92,6 +92,7 @@ alias ducks='du -cks *|sort -rn|head -11'
 alias sushi='sudo less'
 alias rspec='nocorrect rspec'
 alias vms='VBoxManage list runningvms'
+alias pryr="pry -r rails/console/app -r rails/console/helpers -e 'extend Rails::ConsoleMethods'"
 
 mcd() {
   mkdir -p "$1" && cd "$1";
