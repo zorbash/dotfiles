@@ -24,6 +24,7 @@ alias gap='git add --patch'
 alias gdc='git diff --cached'
 
 alias grc='git rebase --continue'
+alias gru='git show `cat .git/rebase-merge/stopped-sha`'
 alias gra='git rebase --abort'
 alias gu='git reset HEAD' #unstage
 alias gcontains='git branch -a --contains='
