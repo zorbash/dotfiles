@@ -6,6 +6,14 @@ servers = (
     use_ssl = "yes";
     ssl_verify = "yes";
     autoconnect = "yes";
+  },
+  {
+    address = "chat.freenode.net";
+    chatnet = "freenode";
+    port = "6697";
+    use_ssl = "yes";
+    ssl_verify = "yes";
+    autoconnect = "yes";
   }
 );
 
@@ -18,12 +26,18 @@ chatnets = {
     max_query_chans = "5";
   };
   Skroutz = { type = "IRC"; };
+  Freenode = {
+    type = "IRC";
+    nick = "zorbash";
+  };
 };
 
 channels = (
-  { name = "#skroutz"; chatnet = "Skroutz"; autojoin = "Yes"; }
-  { name = "#js"; chatnet = "Skroutz"; autojoin = "Yes"; }
-  { name = "#merchants"; chatnet = "Skroutz"; autojoin = "Yes"; }
+  { name = "#skroutz"; chatnet = "Skroutz"; autojoin = "Yes"; },
+  { name = "#js"; chatnet = "Skroutz"; autojoin = "Yes"; },
+  { name = "#merchants"; chatnet = "Skroutz"; autojoin = "Yes"; },
+  { name = "#railsrumble"; chatnet = "Freenode"; autojoin = "yes"; }
+  { name = "#rubyonrails"; chatnet = "Freenode"; autojoin = "yes"; }
 );
 
 aliases = {
