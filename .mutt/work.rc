@@ -1,0 +1,19 @@
+# vim: ft=muttrc:
+
+set realname = 'Dimitris Zorbas'
+set from = 'zorbash@work.com'
+set envelope_from = yes
+
+set imap_user = "zorbash@work.com"
+set folder = imaps://mailer.work.com/
+set smtp_url = smtps://zorbash@mailer.com:993/
+set smtp_pass = $imap_pass
+
+set spoolfile = "=INBOX"
+set record = "=/Sent"
+set postponed = "=/Drafts"
+
+set header_cache = ~/.mutt/caches/work-headercache
+set message_cachedir = ~/.mutt/caches/work-messagecache
+
+source ~/.mutt/shared.rc

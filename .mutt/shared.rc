@@ -1,0 +1,6 @@
+## save copies of sent mail to $record
+set copy=yes
+
+bind index G imap-fetch-mail
+
+set sort = reverse-date-received
