@@ -27,7 +27,9 @@ class ruby_packages {
 
 class db_packages {
   package { ['sqlite3',
-             'libpq-dev']:
+             'libpq-dev',
+             'postgresql-client',
+             'postgresql-client-common']:
     ensure => installed,
   }
 }
