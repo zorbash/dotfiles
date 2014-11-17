@@ -50,7 +50,8 @@ class dev_packages {
              'ttyrec',
              'moc',
              'ack-grep',
-             'locate']:
+             'locate',
+             'libreoffice-base']:
     ensure => installed,
   }
 }
