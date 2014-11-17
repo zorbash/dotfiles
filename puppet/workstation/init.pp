@@ -26,7 +26,8 @@ class ruby_packages {
 }
 
 class db_packages {
-  package { ['sqlite3']:
+  package { ['sqlite3',
+             'libpq-dev']:
     ensure => installed,
   }
 }
