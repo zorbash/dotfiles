@@ -49,6 +49,7 @@ export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/s
 
 export EDITOR=vim
 
+
 # Credits to npm's. Awesome completion utility.
 #
 # Bower completion script, based on npm completion script.
@@ -105,13 +106,9 @@ elif type compctl &>/dev/null; then
 fi
 ###-end-bower-completion-###
 
-PATH=$(npm bin):$PATH
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-
 export RUBY_GC_MALLOC_LIMIT=60000000
-export RUBY_FREE_MIN=200000
-export RUBY_HEAP_MIN_SLOTS=40000
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+export PATH=./node_modules/.bin:$PATH
+
+source /usr/local/share/chruby/chruby.sh
+source /usr/local/share/chruby/auto.sh
