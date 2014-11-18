@@ -59,7 +59,15 @@ class dev_packages {
   }
 }
 
+class printer_packages {
+  package { ['hplip',
+             'cups']:
+    ensure => installed,
+  }
+}
+
 include essential_packages
 include ruby_packages
 include db_packages
 include dev_packages
+include printer_packages
