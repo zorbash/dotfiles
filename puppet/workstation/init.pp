@@ -67,8 +67,15 @@ class printer_packages {
   }
 }
 
+class hobby_packages {
+  package { ['exifprobe']:
+    ensure => installed,
+  }
+}
+
 include essential_packages
 include ruby_packages
 include db_packages
 include dev_packages
 include printer_packages
+include hobby_packages
