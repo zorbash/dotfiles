@@ -6,6 +6,7 @@ class essential_packages {
               'openssl',
               'imagemagick',
               'wdiff',
+              'ttf-mscorefonts-installer',
               'tor']:
     ensure => installed,
   }
