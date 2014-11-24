@@ -7,6 +7,8 @@ class essential_packages {
               'imagemagick',
               'wdiff',
               'ttf-mscorefonts-installer',
+              'gem2deb',
+              'pbuilder',
               'tor']:
     ensure => installed,
   }
