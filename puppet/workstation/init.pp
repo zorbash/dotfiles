@@ -30,6 +30,7 @@ class ruby_packages {
 
 class db_packages {
   package { ['sqlite3',
+             'libsqlite3-dev',
              'libpq-dev',
              'postgresql-client',
              'postgresql-client-common']:
