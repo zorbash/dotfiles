@@ -6,7 +6,6 @@ class essential_packages {
               'openssl',
               'imagemagick',
               'wdiff',
-              'ttf-mscorefonts-installer',
               'gem2deb',
               'pbuilder',
               'tor']:
@@ -71,14 +70,27 @@ class printer_packages {
 }
 
 class hobby_packages {
-  package { ['exifprobe']:
+  package { ['exifprobe',
+             'mtp-tools']:
     ensure => installed,
   }
 }
 
+class npm_packages {
+  package { ['coffee-script',
+             'bower',
+             'LiveScript',
+             'grunt']:
+    ensure   => present,
+    provider => 'npm',
+  }
+}
+
+include nodejs
 include essential_packages
 include ruby_packages
 include db_packages
 include dev_packages
+include npm_packages
 include printer_packages
 include hobby_packages
