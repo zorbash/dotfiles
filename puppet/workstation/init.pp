@@ -8,6 +8,7 @@ class essential_packages {
               'wdiff',
               'gem2deb',
               'pbuilder',
+              'lm-sensors', # provides sensors (for hw temperature monitoring)
               'tor']:
     ensure => installed,
   }
