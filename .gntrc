@@ -1,0 +1,5 @@
+[general]
+mouse = 1
+
+[GntWidget::binding]
+a-b = context-menu
