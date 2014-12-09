@@ -59,6 +59,7 @@ class dev_packages {
              'moc',
              'ack-grep',
              'locate',
+             'evince',
              'libreoffice-base']:
     ensure => installed,
   }
