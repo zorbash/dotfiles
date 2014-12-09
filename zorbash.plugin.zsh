@@ -1,22 +1,11 @@
 alias l='ls -laFh'
 
-alias sser='sudo service'
 alias b='bundle exec'
 alias br='bundle exec rake'
 alias rs='b rails server'
 alias rc='b rails console'
-alias rr='br routes'
 alias rcs='rc --sandbox'
 
-alias gfo='git fetch origin'
-alias lol='git lol'
-alias lola='git lola'
-
-alias st2='sublime-text-2'
-
-alias sagi='sudo apt-get install -y'
-alias sagu='sudo apt-get update'
-alias snig='sudo npm install -g'
 alias pkgfind='dpkg-query -l | grep -i'
 
 alias ga='git add'
@@ -30,8 +19,6 @@ alias gu='git reset HEAD' #unstage
 alias gcontains='git branch -a --contains='
 alias grp='grep --color=always'
 alias ggrp='git grep'
-
-alias rspec='rspec --color'
 
 grih() {
   git rebase -i HEAD~$1
@@ -47,18 +34,12 @@ alias pms='sudo pm-suspend'
 
 alias mp='mkdir -p'
 
-alias xopen='xdg-open'
-
 rspork() {
   rspec --color "$*" --drb;
 }
 
 ase_mas() {
   echo "ase mas re $USER"
-}
-
-c() {
-  less $1
 }
 
 spy () { lsof -i -P +c 0 +M | grep -i "$1" }
@@ -90,7 +71,6 @@ alias pserver="python -m SimpleHTTPServer"
 alias rserver="ruby -run -ehttpd . -p8000"
 alias gitsearch="git rev-list --all | xargs git grep -F"
 alias ducks='du -cks *|sort -rn|head -11'
-alias sushi='sudo less'
 alias rspec='nocorrect rspec'
 alias vms='VBoxManage list runningvms'
 alias pryr="pry -r rails/console/app -r rails/console/helpers -e 'extend Rails::ConsoleMethods'"
