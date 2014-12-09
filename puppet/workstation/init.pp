@@ -8,6 +8,7 @@ class essential_packages {
               'wdiff',
               'gem2deb',
               'pbuilder',
+              'mc', # provides midnight commander
               'lm-sensors', # provides sensors (for hw temperature monitoring)
               'tor']:
     ensure => installed,
@@ -72,6 +73,7 @@ class printer_packages {
 
 class hobby_packages {
   package { ['exifprobe',
+             'nethack-x11',
              'mtp-tools']:
     ensure => installed,
   }
