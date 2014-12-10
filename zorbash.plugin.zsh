@@ -75,6 +75,10 @@ alias rspec='nocorrect rspec'
 alias vms='VBoxManage list runningvms'
 alias pryr="pry -r rails/console/app -r rails/console/helpers -e 'extend Rails::ConsoleMethods'"
 
+# Use alsagain to increase the output volume over 100%
+# usage example: alsagain 190%
+alias alsagain='pactl set-sink-volume alsa_output.pci-0000_00_1b.0.analog-stereo'
+
 alias bim='vim'
 
 mcd() {
