@@ -10,6 +10,7 @@ class essential_packages {
               'pbuilder',
               'mc', # provides midnight commander
               'lm-sensors', # provides sensors (for hw temperature monitoring)
+              'cmake',
               'tor']:
     ensure => installed,
   }
