@@ -16,6 +16,18 @@ class essential_packages {
   }
 }
 
+class python_packages {
+  package { [
+             'python-dev',
+             'python-pip',
+             'ipython',
+             'python-jinja2',
+             'python-tornado',
+             'python-zmq']:
+    ensure => installed,
+  }
+}
+
 class ruby_packages {
   package { ['libffi-dev',
               'libgdbm-dev',
@@ -25,6 +37,8 @@ class ruby_packages {
               'libssl-dev',
               'libxml2-dev',
               'libxslt1-dev',
+              'libmagickwand-dev',
+              'libatlas-base-dev',  # iruby - mikon
               'libcurl4-openssl-dev']:
     ensure => installed,
   }
@@ -91,9 +105,19 @@ class npm_packages {
   }
 }
 
+class gems {
+  package { ['iruby',
+             'gnuplot']:
+    ensure   => present,
+    provider => 'gem',
+  }
+}
+
 include nodejs
 include essential_packages
+include python_packages
 include ruby_packages
+include gems
 include db_packages
 include dev_packages
 include npm_packages
