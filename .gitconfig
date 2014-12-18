@@ -22,6 +22,7 @@
 	g = grep --break --heading --line-number
   lc = "!f() { git log --oneline -n1 $1 | cut -f 1 -d ' '; }; f"
   recent-branches = "!f() { git reflog | grep 'checkout:' | head -n 50 | sed 's/.*moving from //' | sed 's/ to .*//' | sed 's/.* reset: .*//g' | sed '/^$/d' | awk ' !x[$0]++' | head -n 10 | nl; }; f"
+  test="!f() { git diff-index origin/master --name-only | grep '_spec.rb' | xargs bundle exec rspec; }; f"
 
 [color]
   branch = auto
