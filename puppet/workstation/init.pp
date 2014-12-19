@@ -90,6 +90,7 @@ class printer_packages {
 class hobby_packages {
   package { ['exifprobe',
              'nethack-x11',
+             'shutter',
              'mtp-tools']:
     ensure => installed,
   }
