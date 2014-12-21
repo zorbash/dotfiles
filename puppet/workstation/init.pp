@@ -60,6 +60,7 @@ class dev_packages {
              'tig',
              'terminator',
              'i3',
+             'exuberant-ctags',
              'pal',
              'calcurse',
              'curl',
