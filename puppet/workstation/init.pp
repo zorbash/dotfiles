@@ -58,6 +58,7 @@ class db_packages {
 class dev_packages {
   package { ['zsh',
              'vim-nox',
+             'emacs24-nox',
              'tig',
              'terminator',
              'i3',
