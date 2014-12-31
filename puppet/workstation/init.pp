@@ -93,6 +93,7 @@ class hobby_packages {
   package { ['exifprobe',
              'nethack-x11',
              'shutter',
+             'feh',
              'mtp-tools']:
     ensure => installed,
   }
