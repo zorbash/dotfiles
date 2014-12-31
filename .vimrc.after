@@ -9,7 +9,7 @@ colorscheme solarized
 set wildmode=longest,list
 " make tab completion for files/buffers act like bash "
 set wildmenu
-let mapleader=','
+let mapleader='\'
 " Fix slow O inserts"
 set timeout timeoutlen=1000 ttimeoutlen=100
 set cursorline
@@ -46,15 +46,15 @@ nmap <leader>a :Ack<space>
 " Remove trailing whitespaces
 " " taken from:
 " http://stackoverflow.com/questions/356126/how-can-you-automatically-remove-trailing-whitespace-in-vim/1618401#1618401
- fun! <SID>StripTrailingWhitespaces()
-   let l = line(".")
-   let c = col(".")
-   %s/\s\+$//e
-   call cursor(l, c)
- endfun
+fun! <SID>StripTrailingWhitespaces()
+  let l = line(".")
+  let c = col(".")
+  %s/\s\+$//e
+  call cursor(l, c)
+endfun
 
  " auto-strip trailing white space for ruby files
- autocmd BufWritePre *.{rb,coffee,yml,js,html,css,scss} :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.{rb,coffee,yml,js,html,css,scss} :call <SID>StripTrailingWhitespaces()
 
 " backup to ~/.tmp
 set backup
@@ -73,6 +73,7 @@ augroup end
 
 let g:vim_markdown_folding_disabled=1
 
+map <leader>n :NERDTreeToggle<CR>
 
 " Tabularize mappings
 func! SetTabularizeMappings()
@@ -99,5 +100,12 @@ func! SetTabularizeMappings()
 endfu
 autocmd VimEnter * if exists(":Tabularize") | exe "call SetTabularizeMappings()" | endif
 
+" Open tag in vertical split
+"nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
+nnoremap <silent> ,F :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
+
 
 let g:rainbow_active = 1
+let g:livepreview_previewer = 'evince'
+
+set tags+=./gems.tags
