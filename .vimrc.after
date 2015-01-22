@@ -21,6 +21,7 @@ set splitbelow
 
 "Spell checking git commits and markdown"
 autocmd BufRead,BufNewFile *.md setlocal spell
+autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd FileType gitcommit setlocal spell
 
 "Ctrl-P related settings
