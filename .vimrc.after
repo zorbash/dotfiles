@@ -55,7 +55,7 @@ fun! <SID>StripTrailingWhitespaces()
 endfun
 
  " auto-strip trailing white space for ruby files
-autocmd BufWritePre *.{rb,coffee,yml,js,html,css,scss} :call <SID>StripTrailingWhitespaces()
+autocmd BufWritePre *.{rb,erb,coffee,clj,ls,yml,js,html,css,scss} :call <SID>StripTrailingWhitespaces()
 
 " backup to ~/.tmp
 set backup
