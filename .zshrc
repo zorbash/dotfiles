@@ -110,6 +110,8 @@ export RUBY_GC_MALLOC_LIMIT=60000000
 
 export PATH=./node_modules/.bin:$PATH
 
+export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
+
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 chruby ruby-2.1.4
