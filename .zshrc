@@ -110,6 +110,10 @@ export RUBY_GC_MALLOC_LIMIT=60000000
 
 export PATH=./node_modules/.bin:$PATH
 
+export PATH="$HOME/.linuxbrew/bin:$PATH"
+export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
+export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
+
 export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
 
 source /usr/local/share/chruby/chruby.sh
