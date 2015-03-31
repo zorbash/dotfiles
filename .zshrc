@@ -119,3 +119,4 @@ export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
 chruby ruby-2.1.4
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
