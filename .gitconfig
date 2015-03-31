@@ -1,25 +1,26 @@
 [user]
-	name = Dimitris Zorbas
-	email = zorbash@skroutz.gr
+  name = Dimitris Zorbas
+  email = zorbash@skroutz.gr
 [alias]
-	co = checkout
-	br = branch
-	ci = commit
-	st = status
-	last = log -1 HEAD
-	visual = !gitk
-	today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
-	lol = log --graph --decorate --pretty=oneline --abbrev-commit
-	lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
-	sshow = "!f() { git stash show stash^{/$*} -p; }; f"
-	sapply = "!f() { git stash apply stash^{/$*}; }; f"
-	ri = rebase -i
-	ris = rebase -i --autosquash
-	cif = "!f() { git commit --fixup="$1"; }; f"
-	dc = "diff --cached"
-	ds = "diff --staged"
-	panic = rev-list --all --remotes --pretty=oneline
-	g = grep --break --heading --line-number
+  m = ls-files -m
+  co = checkout
+  br = branch
+  ci = commit
+  st = status
+  last = log -1 HEAD
+  visual = !gitk
+  today = log --stat --since='1 Day Ago' --graph --pretty=oneline --abbrev-commit --date=relative
+  lol = log --graph --decorate --pretty=oneline --abbrev-commit
+  lola = log --graph --decorate --pretty=oneline --abbrev-commit --all
+  sshow = "!f() { git stash show stash^{/$*} -p; }; f"
+  sapply = "!f() { git stash apply stash^{/$*}; }; f"
+  ri = rebase -i
+  ris = rebase -i --autosquash
+  cif = "!f() { git commit --fixup="$1"; }; f"
+  dc = "diff --cached"
+  ds = "diff --staged"
+  panic = rev-list --all --remotes --pretty=oneline
+  g = grep --break --heading --line-number
   lc = "!f() { git log --oneline -n1 $1 | cut -f 1 -d ' '; }; f"
   recent-branches = "!f() { git reflog | grep 'checkout:' | head -n 50 | sed 's/.*moving from //' | sed 's/ to .*//' | sed 's/.* reset: .*//g' | sed '/^$/d' | awk ' !x[$0]++' | head -n 10 | nl; }; f"
   test="!f() { git diff-index origin/master --name-only | grep '_spec.rb' | xargs bundle exec rspec; }; f"
@@ -30,8 +31,8 @@
   interactive = auto
   status = auto
 [core]
-	editor = vim
+  editor = vim
 [push]
-	default = upstream
+  default = upstream
 [grep]
-	lineNumber = true
+  lineNumber = true
