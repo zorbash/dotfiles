@@ -10,6 +10,7 @@ class essential_packages {
               'pbuilder',
               'mc', # provides midnight commander
               'lm-sensors', # provides sensors (for hw temperature monitoring)
+              'xbacklight',
               'clang',
               'cmake',
               'tor']:
@@ -96,6 +97,9 @@ class hobby_packages {
              'nethack-x11',
              'shutter',
              'feh',
+             'golly',
+             'unrar',
+             'lshw',
              'mtp-tools']:
     ensure => installed,
   }
