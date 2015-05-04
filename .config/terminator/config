@@ -3,15 +3,17 @@
   focus = mouse
   tab_position = hidden
 [keybindings]
-  group_tab = <Alt>t
-  group_all = <Alt>g
-  go_right = <Super>Right
+  group_tab = None
+  group_all = None
+  go_right = None
+  full_screen = None
 [profiles]
   [[default]]
-    scrollbar_position = hidden
+    background_image = None
     login_shell = True
     background_darkness = 0.94
     background_type = transparent
+    scrollbar_position = hidden
     cursor_color = "#eee8d5"
     foreground_color = "#eee8d5"
     show_titlebar = False
