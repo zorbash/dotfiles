@@ -84,3 +84,5 @@ alias bim='vim'
 mcd() {
   mkdir -p "$1" && cd "$1";
 }
+
+alias kd='docker ps -q -a | xargs --no-run-if-empty docker rm -f'
