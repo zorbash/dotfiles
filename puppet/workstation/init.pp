@@ -13,6 +13,7 @@ class essential_packages {
               'xbacklight',
               'clang',
               'cmake',
+              'keepassx',
               'tor']:
     ensure => installed,
   }
@@ -123,6 +124,13 @@ class gems {
   }
 }
 
+class fonts {
+  package { ['ttf-liberation',
+             'ttf-dejavu']:
+    ensure   => installed,
+  }
+}
+
 include nodejs
 include essential_packages
 include python_packages
@@ -133,3 +141,4 @@ include dev_packages
 include npm_packages
 include printer_packages
 include hobby_packages
+include fonts
