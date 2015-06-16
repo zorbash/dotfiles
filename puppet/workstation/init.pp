@@ -4,6 +4,7 @@ class essential_packages {
               'htop',
               'iotop',
               'openssl',
+              'openvpn',
               'imagemagick',
               'wdiff',
               'gem2deb',
