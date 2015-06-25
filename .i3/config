@@ -164,5 +164,5 @@ bar {
         status_command i3status
 }
 
-exec --no-startup-id xsetroot -solid "#333333"
+exec --no-startup-id hsetroot -solid "#333333"
 exec --no-startup-id feh --bg-tile ~/Pictures/wallpapers/cartographer
