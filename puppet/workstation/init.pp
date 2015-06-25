@@ -65,6 +65,7 @@ class dev_packages {
              'tig',
              'terminator',
              'i3',
+             'compton',
              'openjdk-7-jdk', # for android studio
              'exuberant-ctags',
              'pal',
