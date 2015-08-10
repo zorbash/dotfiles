@@ -86,3 +86,4 @@ mcd() {
 }
 
 alias kd='docker ps -q -a | xargs --no-run-if-empty docker rm -f'
+alias tags="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)"
