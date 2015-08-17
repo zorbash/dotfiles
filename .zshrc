@@ -15,7 +15,7 @@ ZSH_THEME="pygmalion"
 # CASE_SENSITIVE="true"
 
 # Comment this out to disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
+DISABLE_AUTO_UPDATE="true"
 
 # Uncomment to change how often before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
@@ -115,8 +115,10 @@ export MANPATH="$HOME/.linuxbrew/share/man:$MANPATH"
 export INFOPATH="$HOME/.linuxbrew/share/info:$INFOPATH"
 
 export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
+export GOPATH="$HOME/go"
 
 source /usr/local/share/chruby/chruby.sh
 source /usr/local/share/chruby/auto.sh
-chruby ruby-2.1.4
+
+chruby 2.1.4
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
