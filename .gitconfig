@@ -2,7 +2,7 @@
   name = Dimitris Zorbas
   email = zorbash@skroutz.gr
 [alias]
-  m = ls-files -m
+  m = "!f() { git ls-files -m | uniq; }; f"
   co = checkout
   br = branch
   ci = commit
@@ -24,6 +24,8 @@
   lc = "!f() { git log --oneline -n1 $1 | cut -f 1 -d ' '; }; f"
   recent-branches = "!f() { git reflog | grep 'checkout:' | head -n 50 | sed 's/.*moving from //' | sed 's/ to .*//' | sed 's/.* reset: .*//g' | sed '/^$/d' | awk ' !x[$0]++' | head -n 10 | nl; }; f"
   test="!f() { git diff-index origin/master --name-only | grep '_spec.rb' | xargs bundle exec rspec; }; f"
+  files-changed="!f() { git --no-pager diff --name-only `git merge-base origin/master @`..@; }; f"
+  file-diff="!f() { git diff `git merge-base origin/master @` -- $1; }; f"
 
 [color]
   branch = auto
