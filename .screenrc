@@ -1,0 +1,13 @@
+defscrollback 10000
+
+bind s split
+
+bind h focus left
+bind j focus down
+bind k focus up
+bind l focus right
+
+startup_message off
+hardstatus alwayslastline
+vbell off
+
