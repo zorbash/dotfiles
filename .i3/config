@@ -165,4 +165,5 @@ bar {
 }
 
 exec --no-startup-id hsetroot -solid "#333333"
-exec --no-startup-id feh --bg-tile ~/Pictures/wallpapers/cartographer
+exec --no-startup-id feh --bg-tile ~/dev/dotfiles/wallpapers/cartographer
+exec --no-startup-id compton -b --vsync opengl
