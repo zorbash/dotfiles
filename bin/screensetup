@@ -1,0 +1,29 @@
+#! /usr/bin/env bash
+
+# Usage:
+# To adjust screens at work
+# screensetup --work
+# To adjust screens at home
+# screensetup --home
+
+if [ "$#" -ne 1 ]; then
+  xrandr --auto
+  exit
+fi
+
+function usage()
+{
+  echo "Usage: screensetup [--work] [--home]"
+}
+
+case $1 in
+  --home)
+  xrandr --output HDMI1 --mode 1920x1080 --output eDP1 --mode 1920x1080 --left-of HDMI1
+  ;;
+  --work)
+  xrandr --output HDMI1 --mode 1920x1200 --output eDP1 --mode 1920x1080 --left-of HDMI1
+  ;;
+  *)
+  echo "Invalid flag \"$1\""
+  echo $(usage)
+esac
