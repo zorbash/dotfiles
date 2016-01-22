@@ -101,10 +101,33 @@ func! SetTabularizeMappings()
 endfu
 autocmd VimEnter * if exists(":Tabularize") | exe "call SetTabularizeMappings()" | endif
 
+command Tig :call s:Tig()
+command Vtig :call s:Vtig()
+
+function! s:Tig()
+  :split term://tig
+endfunction
+
+function! s:Vtig()
+  :vsplit term://tig
+endfunction
+
 " Open tag in vertical split
 "nnoremap <silent> ,F :let word=expand("<cword>")<CR>:vsp<CR>:wincmd w<cr>:exec("tag ". word)<cr>
 nnoremap <silent> ,F :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
+" Neovim terminal navigation
+if has('nvim')
+  tnoremap <A-h> <C-\><C-n><C-w>h
+  tnoremap <A-j> <C-\><C-n><C-w>j
+  tnoremap <A-k> <C-\><C-n><C-w>k
+  tnoremap <A-l> <C-\><C-n><C-w>l
+endif
+
+nnoremap <A-h> <C-w>h
+nnoremap <A-j> <C-w>j
+nnoremap <A-k> <C-w>k
+nnoremap <A-l> <C-w>l
 
 let g:rainbow_active = 1
 let g:livepreview_previewer = 'evince'
