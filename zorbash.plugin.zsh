@@ -89,4 +89,5 @@ alias kd='docker ps -q -a | xargs --no-run-if-empty docker rm -f'
 alias tags="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths)"
 
 alias audiojack="sudo amixer cset numid=3 1"
-alias dbundle='ruby -I ~/dev/gems/bundler/lib ~/dev/gems/bundler/exe/bundle'
+alias dbundle='ruby -I ~/dev/open-source/bundler/lib ~/dev/open-source/bundler/exe/bundle'
+
