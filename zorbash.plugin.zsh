@@ -91,3 +91,4 @@ alias tags="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle li
 alias audiojack="sudo amixer cset numid=3 1"
 alias dbundle='ruby -I ~/dev/open-source/bundler/lib ~/dev/open-source/bundler/exe/bundle'
 
+alias specs='git files-changes | grep spec | xargs bundle exec rspec --format=documentation'
