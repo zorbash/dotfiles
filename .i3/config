@@ -88,17 +88,6 @@ bindsym $mod+8 workspace 8
 bindsym $mod+9 workspace 9
 bindsym $mod+0 workspace 10
 
-bindsym F1 workspace 1
-bindsym F2 workspace 2
-bindsym F3 workspace 3
-bindsym F4 workspace 4
-bindsym F5 workspace 5
-bindsym F6 workspace 6
-bindsym Shift+F1 workspace 7
-bindsym Shift+F2 workspace 8
-bindsym Shift+F3 workspace 9
-bindsym Shift+F4 workspace 10
-
 # move focused container to workspace
 bindsym $mod+Shift+exclam move workspace 1
 bindsym $mod+Shift+at move workspace 2
@@ -165,5 +154,5 @@ bar {
 }
 
 exec --no-startup-id hsetroot -solid "#333333"
-exec --no-startup-id feh --bg-tile ~/dev/dotfiles/wallpapers/cartographer
+exec --no-startup-id feh --bg-fill /home/zorbash/dev/dotfiles/wallpapers/trains.jpg
 exec --no-startup-id compton -b --vsync opengl
