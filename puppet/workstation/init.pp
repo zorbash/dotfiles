@@ -17,6 +17,7 @@ class essential_packages {
               'keepassx',
               'arandr',
               'pm-utils',
+              'alsa-utils',
               'tor']:
     ensure => installed,
   }
