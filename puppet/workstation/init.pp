@@ -15,6 +15,8 @@ class essential_packages {
               'clang',
               'cmake',
               'keepassx',
+              'arandr',
+              'pm-utils',
               'tor']:
     ensure => installed,
   }
