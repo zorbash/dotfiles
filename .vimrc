@@ -1,40 +1,39 @@
-set encoding=utf8
+if !has('nvim')
+  set encoding=utf-8
+end
 
-set number
-set expandtab
-set tabstop=2
-set shiftwidth=2
-set smarttab
+" .vimrc.before is loaded before the plugins have loaded
+if filereadable(expand("~/.vimrc.before"))
+  source ~/.vimrc.before
+endif
 
-set shell=$SHELL\ -1
-set ruler
-set hlsearch
+call plug#begin()
+Plug 'tpope/vim-sensible'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-eunuch'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'scrooloose/syntastic'
+Plug 'scrooloose/nerdcommenter'
+Plug 'vim-airline/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'airblade/vim-gitgutter'
+Plug 'rhysd/committia.vim'
+Plug 'shime/vim-livedown'
+Plug 'jeetsukumaran/vim-buffergator'
+Plug 'altercation/vim-colors-solarized'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'gorodinskiy/vim-coloresque'
 
-set nobackup
-set nowb
-set noswapfile
+" Languages
+Plug 'vim-ruby/vim-ruby'
+Plug 'kchmck/vim-coffee-script'
+Plug 'pangloss/vim-javascript'
+Plug 'elixir-lang/vim-elixir'
+Plug 'jimenezrick/vimerl'
+call plug#end()
 
-" Return to last edit position when opening files (You want this!)
-autocmd BufReadPost *
-     \ if line("'\"") > 0 && line("'\"") <= line("$") |
-     \   exe "normal! g`\"" |
-     \ endif
-
-" Delete trailing white space on save, useful for Python and CoffeeScript ;)
-func! DeleteTrailingWS()
-  exe "normal mz"
-  %s/\s\+$//ge
-  exe "normal `z"
-endfunc
-autocmd BufWrite * :call DeleteTrailingWS()
-
-set nocompatible               " be iMproved
-filetype off                   " required!
-
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
-
-Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
-Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
-Bundle 'tpope/vim-rails.git'
+" .vimrc.after is loaded after the plugins have loaded
+if filereadable(expand("~/.vimrc.after"))
+  source ~/.vimrc.after
+endif
