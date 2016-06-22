@@ -24,6 +24,10 @@ autocmd BufRead,BufNewFile *.md setlocal spell
 autocmd BufNewFile,BufReadPost *.md set filetype=markdown
 autocmd FileType gitcommit setlocal spell
 
+"Per format configs
+autocmd FileType c setlocal spell cindent noexpandtab ts=4 sw=4
+autocmd BufEnter *.c colorscheme molokai
+
 "Ctrl-P related settings
 let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files | grep -v -E ".*\.(jpg|gif|png)$"']
 let g:ctrlp_match_window_reversed = 0
@@ -54,8 +58,8 @@ fun! <SID>StripTrailingWhitespaces()
   call cursor(l, c)
 endfun
 
- " auto-strip trailing white space for ruby files
-autocmd BufWritePre *.{rb,html.erb,coffee,clj,ls,sql,yml,js,html,css,scss} :call <SID>StripTrailingWhitespaces()
+" auto-strip trailing white space for ruby files
+autocmd BufWritePre *.{rb,html.erb,coffee,clj,ls,sql,yml,js,html,css,scss,ex,exs} :call <SID>StripTrailingWhitespaces()
 
 " backup to ~/.tmp
 set backup
@@ -122,6 +126,8 @@ if has('nvim')
   tnoremap <A-j> <C-\><C-n><C-w>j
   tnoremap <A-k> <C-\><C-n><C-w>k
   tnoremap <A-l> <C-\><C-n><C-w>l
+
+  tnoremap <Leader>t <C-\><C-n>gg
 endif
 
 nnoremap <A-h> <C-w>h
@@ -136,3 +142,9 @@ set tags+=./gems.tags
 
 nmap <silent> <Leader>pa :set invpaste<CR>:set paste?<CR>
 imap <silent> <Leader>pa <ESC>:set invpaste<CR>:set paste?<CR>
+
+" Fix lag problems
+set lazyredraw
+let g:indentLine_faster = 1
+set norelativenumber
+syntax sync minlines=256
