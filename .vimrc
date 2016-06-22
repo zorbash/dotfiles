@@ -16,12 +16,14 @@ Plug 'tpope/vim-rails'
 Plug 'scrooloose/syntastic'
 Plug 'scrooloose/nerdcommenter'
 Plug 'vim-airline/vim-airline'
+Plug 'ryanoasis/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'airblade/vim-gitgutter'
 Plug 'rhysd/committia.vim'
 Plug 'shime/vim-livedown'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'altercation/vim-colors-solarized'
+Plug 'flazz/vim-colorschemes'
 Plug 'bronson/vim-trailing-whitespace'
 Plug 'gorodinskiy/vim-coloresque'
 
@@ -31,6 +33,8 @@ Plug 'kchmck/vim-coffee-script'
 Plug 'pangloss/vim-javascript'
 Plug 'elixir-lang/vim-elixir'
 Plug 'jimenezrick/vimerl'
+
+Plug 'chrisbra/csv.vim'
 call plug#end()
 
 " .vimrc.after is loaded after the plugins have loaded
