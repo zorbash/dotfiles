@@ -148,3 +148,7 @@ set lazyredraw
 let g:indentLine_faster = 1
 set norelativenumber
 syntax sync minlines=256
+
+"Macros
+nnoremap <silent> <Leader>dr O# ╯(°□°）╯︵ ┻━┻<ESC>o<BS><BS>require 'pry'; binding.pry<ESC>
+nnoremap <silent> <Leader>dj O# ╯(°□°）╯︵ ┻━┻<ESC>o<BS><BS>debugger<ESC>
