@@ -147,6 +147,9 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+bindsym $mod+q exec rofi -show run
+bindsym $mod+x exec rofi -show window
+
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
@@ -154,5 +157,5 @@ bar {
 }
 
 exec --no-startup-id hsetroot -solid "#333333"
-exec --no-startup-id feh --bg-fill /home/zorbash/dev/dotfiles/wallpapers/trains.jpg
 exec --no-startup-id compton -b --vsync opengl
+exec --no-startup-id feh --bg-fill /home/zorbash/dev/dotfiles/wallpapers/grid.jpg
