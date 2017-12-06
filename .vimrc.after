@@ -127,13 +127,25 @@ if has('nvim')
   tnoremap <A-k> <C-\><C-n><C-w>k
   tnoremap <A-l> <C-\><C-n><C-w>l
 
-  tnoremap <Leader>t <C-\><C-n>gg
+  " MacOS
+  tnoremap ˙ <C-\><C-n><C-w>h
+  tnoremap ∆ <C-\><C-n><C-w>j
+  tnoremap ˚ <C-\><C-n><C-w>k
+  tnoremap ¬ <C-\><C-n><C-w>l
+
+  tnoremap <Leader>t <C-\><C-n>
 endif
 
 nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+
+" MacOS
+nnoremap ˙ <C-\><C-n><C-w>h
+nnoremap ∆ <C-\><C-n><C-w>j
+nnoremap ˚ <C-\><C-n><C-w>k
+nnoremap ¬ <C-\><C-n><C-w>l
 
 let g:rainbow_active = 1
 let g:livepreview_previewer = 'evince'
