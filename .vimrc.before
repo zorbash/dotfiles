@@ -88,6 +88,20 @@ inoremap <C-k> <Esc>:m .-2<CR>==gi
 vnoremap <C-j> :m '>+1<CR>gv=gv
 vnoremap <C-k> :m '<-2<CR>gv=gv
 
+""" Tabs
+map <silent> <PageUp> :tabprevious <CR>
+map <silent> <PageDown> :tabnext <CR>
+map <silent> ª :tabprevious <CR>
+map <silent> º :tabnext <CR>
+tnoremap <silent> <PageUp> :tabprevious <CR>
+tnoremap <silent> <PageDown> :tabnext <CR>
+tnoremap <silent> ª <C-\>t :tabprevious <CR>
+tnoremap <silent> º <C-\>t :tabnext <CR>
+map <silent> <A-9> :tabprevious <CR>
+map <silent> <A-0> :tabnext <CR>
+tnoremap <silent> <A-9> <C-\>t :tabprevious <CR>
+tnoremap <silent> <A-0> <C-\>t :tabnext <CR>
+
 ""
 "" Command-Line Mappings
 ""

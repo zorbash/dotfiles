@@ -13,8 +13,11 @@ let mapleader='\'
 " Fix slow O inserts"
 set timeout timeoutlen=1000 ttimeoutlen=100
 set cursorline
-set colorcolumn=80,90
-highlight ColorColumn ctermbg=8
+"set colorcolumn=80,90
+set colorcolumn=90,120
+"highlight ColorColumn ctermbg=8
+"highlight ColorColumn ctermbg=246
+highlight ColorColumn ctermbg=11
 set mouse=a
 set splitright
 set splitbelow
@@ -29,16 +32,16 @@ autocmd FileType c setlocal spell cindent noexpandtab ts=4 sw=4
 autocmd BufEnter *.c colorscheme molokai
 
 "Ctrl-P related settings
-let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files | grep -v -E ".*\.(jpg|gif|png)$"']
-let g:ctrlp_match_window_reversed = 0
-let g:ctrlp_open_multiple_files = 'vj'
-let g:ctrlp_arg_map = 0
-nmap <leader>t :CtrlPMixed<CR>
+"let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files | grep -v -E ".*\.(jpg|gif|png)$"']
+"let g:ctrlp_match_window_reversed = 0
+"let g:ctrlp_open_multiple_files = 'vj'
+"let g:ctrlp_arg_map = 0
+"nmap <leader>t :CtrlPMixed<CR>
 
-let g:ctrlp_prompt_mappings = {
-    \ 'AcceptSelection("e")': ['<c-v>', '<2-LeftMouse>'],
-    \ 'AcceptSelection("v")': ['<cr>', '<RightMouse>'],
-    \ }
+"let g:ctrlp_prompt_mappings = {
+    "\ 'AcceptSelection("e")': ['<c-v>', '<2-LeftMouse>'],
+    "\ 'AcceptSelection("v")': ['<cr>', '<RightMouse>'],
+    "\ }
 
 "Vim Powerline
 let g:Powerline_symbols = 'fancy'
@@ -155,6 +158,9 @@ set tags+=./gems.tags
 nmap <silent> <Leader>pa :set invpaste<CR>:set paste?<CR>
 imap <silent> <Leader>pa <ESC>:set invpaste<CR>:set paste?<CR>
 
+" Display tabs as characters
+set listchars=tab:>-
+
 " Fix lag problems
 set lazyredraw
 let g:indentLine_faster = 1
@@ -164,3 +170,103 @@ syntax sync minlines=256
 "Macros
 nnoremap <silent> <Leader>dr O# ╯(°□°）╯︵ ┻━┻<ESC>o<BS><BS>require 'pry'; binding.pry<ESC>
 nnoremap <silent> <Leader>dj O# ╯(°□°）╯︵ ┻━┻<ESC>o<BS><BS>debugger<ESC>
+
+" Linters
+let g:ale_linters = {
+\   'ruby': ['rubocop'],
+\}
+
+let g:netrw_banner = 0
+
+
+" CoC-nvim
+set cmdheight=2
+" Use <c-space> for trigger completion.
+inoremap <silent><expr> <c-space> coc#refresh()
+
+" Remap keys for gotos
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
+" Use K for show documentation in preview window
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
+
+" Using CocList
+" Show all diagnostics
+nnoremap <silent> <space>a  :<C-u>CocList diagnostics<cr>
+
+
+
+" This is the default extra key bindings
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-x': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" FZF
+
+nnoremap <C-p> :Files<Cr>
+nnoremap <C-f> :Rg!<Cr>
+
+" Default fzf layout
+" - down / up / left / right
+" In Neovim, you can set up fzf window using a Vim command
+let g:fzf_layout = { 'window': 'enew' }
+let g:fzf_layout = { 'window': '-tabnew' }
+let g:fzf_layout = { 'window': '10new', 'up': '%60' }
+
+" Customize fzf colors to match your color scheme
+let g:fzf_colors =
+\ { 'fg':      ['fg', 'Normal'],
+  \ 'bg':      ['bg', 'Normal'],
+  \ 'hl':      ['fg', 'Comment'],
+  \ 'fg+':     ['fg', 'CursorLine', 'CursorColumn', 'Normal'],
+  \ 'bg+':     ['bg', 'CursorLine', 'CursorColumn'],
+  \ 'hl+':     ['fg', 'Statement'],
+  \ 'info':    ['fg', 'PreProc'],
+  \ 'border':  ['fg', 'Ignore'],
+  \ 'prompt':  ['fg', 'Conditional'],
+  \ 'pointer': ['fg', 'Exception'],
+  \ 'marker':  ['fg', 'Keyword'],
+  \ 'spinner': ['fg', 'Label'],
+  \ 'header':  ['fg', 'Comment'] }
+
+" Enable per-command history.
+" CTRL-N and CTRL-P will be automatically bound to next-history and
+" previous-history instead of down and up. If you don't like the change,
+" explicitly bind the keys to down and up in your $FZF_DEFAULT_OPTS.
+let g:fzf_history_dir = '~/.local/share/fzf-history'
+
+let g:instant_markdown_autostart = 0
+let g:instant_markdown_slow = 1
+
+let g:fzf_files_options =
+      \ '--preview "(coderay {} || less {}) 2> /dev/null | head -'.&lines.'"'
+
+command! -bang -nargs=* Ag
+  \ call fzf#vim#ag(<q-args>,
+  \                 <bang>0 ? fzf#vim#with_preview('up:60%')
+  \                         : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \                 <bang>0)
+
+" Similarly, we can apply it to fzf#vim#grep. To use ripgrep instead of ag:
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always --smart-case '.shellescape(<q-args>), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+" Likewise, Files command with preview window
+command! -bang -nargs=? -complete=dir Files
+  \ call fzf#vim#files(<q-args>, fzf#vim#with_preview('right:60%'), <bang>0)
